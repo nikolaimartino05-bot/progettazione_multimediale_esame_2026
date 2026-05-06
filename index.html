@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nikolai Martino — Portfolio</title>
+  <meta name="description" content="Portfolio di Nikolai Martino, studente di Media Design con passione per la comunicazione visiva, il design e la pubblicità.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar" role="banner">
+    <nav class="navbar__inner" aria-label="Navigazione principale">
+
+      <a href="index.html" class="navbar__logo" aria-label="Torna alla home">
+        <img src="img/logo-nm-clean.png" alt="Logo Nikolai Martino" class="navbar__logo-img">
+        <span>Nikolai Martino</span>
+      </a>
+
+      <button
+        class="navbar__toggle"
+        aria-expanded="false"
+        aria-controls="navbar-menu"
+        aria-label="Apri menu di navigazione"
+      >
+        ☰
+      </button>
+
+      <ul class="navbar__links" id="navbar-menu" role="list">
+        <li><a href="index.html" class="navbar__link active" aria-current="page">Home</a></li>
+        <li><a href="bio.html" class="navbar__link">Bio</a></li>
+        <li><a href="portfolio.html" class="navbar__link">Portfolio</a></li>
+        <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero" aria-label="Presentazione">
+      <div class="hero__content">
+        <div class="hero__avatar" role="img" aria-label="Foto profilo di Nikolai Martino"></div>
+        <h1 class="hero__name">Nikolai Martino</h1>
+        <h2 class="hero__title">Media Design &amp; Comunicazione Visiva</h2>
+        <a href="portfolio.html" class="btn btn--primary hero__cta">Scopri i miei lavori</a>
+      </div>
+    </section>
+
+    <!-- Anteprima portfolio -->
+    <section class="section preview" aria-labelledby="preview-heading">
+      <div class="container">
+
+        <h2 class="preview__heading" id="preview-heading">Lavori selezionati</h2>
+        <p class="preview__sub text-muted">Una selezione di progetti che raccontano il mio percorso creativo.</p>
+
+        <ul class="preview__grid" role="list">
+
+          <li class="card">
+            <a href="lavoro-1.html" class="card__link" aria-label="Vai al progetto Erasmus 2023/2024">
+              <img
+                class="card__img"
+                src="img/IMG_9769.jpeg"
+                alt="Immagini e ricordi del progetto Erasmus 2023/2024"
+                loading="lazy"
+              >
+              <div class="card__body">
+                <p class="card__tag text-muted">Esperienza internazionale</p>
+                <h3 class="card__title">Erasmus 2023/2024</h3>
+                <p class="card__desc">Un anno all'estero tra cultura, design e nuove prospettive visive.</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="card">
+            <a href="lavoro-2.html" class="card__link" aria-label="Vai al progetto Liceo Artistico Caravaggio">
+              <img
+                class="card__img"
+                src="img/AF4D20D5-7E48-46F9-8F30-011CDE38D1F8.jpg"
+                alt="Lavori realizzati al Liceo Artistico Caravaggio"
+                loading="lazy"
+              >
+              <div class="card__body">
+                <p class="card__tag text-muted">Formazione artistica</p>
+                <h3 class="card__title">Liceo Artistico Caravaggio</h3>
+                <p class="card__desc">Il percorso formativo che ha costruito le basi del mio linguaggio visivo.</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="card">
+            <a href="lavoro-3.html" class="card__link" aria-label="Vai al progetto Da Enzo al 29">
+              <img
+                class="card__img"
+                src="img/9faee6a9d58521f7d0015764c5b4f161f2074880-1312x1312.jpeg"
+                alt="Progetto fotografico e narrativo Da Enzo al 29"
+                loading="lazy"
+              >
+              <div class="card__body">
+                <p class="card__tag text-muted">Progetto personale</p>
+                <h3 class="card__title">Da Enzo al 29</h3>
+                <p class="card__desc">Un progetto intimo che esplora identità, memoria e appartenenza.</p>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="preview__cta">
+          <a href="portfolio.html" class="btn btn--outline">Vedi tutti i lavori</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; 2025 Nikolai Martino — Media Design</p>
+    </div>
+  </footer>
+
+</body>
+<script src="js/main.js"></script>
+</html>

@@ -1,0 +1,45 @@
+You are helping build a personal portfolio website for Nikolai Martino, a Media Design student with a background in advertising and visual communication.
+
+## Project
+
+- Static HTML/CSS/JS site, no frameworks, no build tools
+- Language: Italian
+- Files: index.html, bio.html, portfolio.html, lavoro-1.html, lavoro-2.html, lavoro-3.html, contatti.html
+- CSS in /css/style.css (single shared file), images in /img/, scripts in /js/main.js
+- All pages share the same navbar and footer structure
+
+## Design system
+
+- Primary:    #1A1A2E  → --color-primary   (dark anthracite, brand color)
+- Accent:     #E94560  → --color-accent    (red-pink, CTA and hover states)
+- Background: #FFFFFF  → --color-bg        (general page background)
+- Text:       #1A1A2E  → --color-text      (main body text)
+- Surface:    #F4F4F4  → --color-surface   (card backgrounds, alternate sections)
+- Muted:      #6B6B6B  → --color-muted     (secondary text, captions)
+
+- Title font: Playfair Display (700, 900) — headings h1–h3
+- Body font:  Inter (400, 500) — paragraphs, labels, UI elements
+
+Google Fonts link (must be in every <head>):
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+## Rules
+
+- Always use CSS custom properties (--color-primary, --color-accent, etc.), never hardcode colors or font names
+- Use semantic HTML5 tags: <header>, <main>, <section>, <article>, <nav>, <footer>
+- Every <img> must have a descriptive alt attribute in Italian
+- CSS is organized in this order: reset, custom properties, typography, layout, components, pages, responsive
+- Mobile-first: default styles target mobile, breakpoints at 768px (tablet) and 1024px (desktop)
+- Class names use BEM-style kebab-case: .navbar__links, .card__title, .btn--primary
+- JavaScript in main.js must be vanilla ES6+, no jQuery or external libraries
+- Never inline styles; never use !important unless strictly necessary
+- Prefer CSS Grid for two-dimensional layouts, Flexbox for one-dimensional alignment
+- When generating a new HTML page, always include: correct lang="it", charset UTF-8, viewport meta, link to /css/style.css, link to /js/main.js before </body>
+
+## Content context
+
+- Projects featured: Erasmus 2023/2024, Liceo Artistico Caravaggio, Da Enzo al 29
+- Social links: Instagram (@_nikomartino_), YouTube, LinkedIn
+- Tone: professional but personal, creative, concise
