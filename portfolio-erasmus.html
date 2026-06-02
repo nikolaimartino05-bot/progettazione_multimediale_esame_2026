@@ -7,13 +7,29 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-portfolio">
-  <header class="navbar navbar--scrolled">
-    <nav class="navbar__inner">
-      <a href="index.html" class="navbar__logo">
-        <img src="img/logo-nm-clean.png" alt="Logo" class="navbar__logo-img">
-        <span>Nikolai Martino</span>
+    <header class="navbar navbar--solid" role="banner">
+    <nav class="navbar__inner" aria-label="Navigazione principale">
+      <ul class="navbar__links navbar__links--left" role="list">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="bio.html" class="navbar__link">Bio</a></li>
+      </ul>
+      <a href="index.html" class="navbar__logo" aria-label="Nikolai Martino — Homepage">
+        <img src="img/logo/logo-nm-clean.png" alt="Logo NM" class="navbar__logo-img">
       </a>
+      <ul class="navbar__links navbar__links--right" role="list">
+        <li><a href="portfolio.html" class="navbar__link active" aria-current="page">Portfolio</a></li>
+        <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
+      </ul>
+      <button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Apri menu">☰</button>
     </nav>
+    <div class="navbar__mobile" id="navbar-menu">
+      <ul class="navbar__mobile-links" role="list">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="bio.html" class="navbar__link">Bio</a></li>
+        <li><a href="portfolio.html" class="navbar__link active">Portfolio</a></li>
+        <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
+      </ul>
+    </div>
   </header>
 
   <main class="container project-detail">

@@ -3,39 +3,522 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Illustrator — Nikolai Martino</title>
+
+  <title>Dalla Sfida alla Forma — Illustrator · Nikolai Martino</title>
+  <meta name="description" content="I lavori di Adobe Illustrator realizzati per l'esame IED Roma 2025: type modulare, logo design e poster campaign.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dalla Sfida alla Forma — Illustrator · Nikolai Martino">
+  <meta property="og:description" content="Geometrie, vettori e precisione: il percorso con Adobe Illustrator tra type design, logo design e multisoggetto.">
+  <meta property="og:image" content="img/esame%20illustrator/pages/page-25.png">
+  <meta property="og:url" content="https://nikolaimartino.com/portfolio-illustrator.html">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/logo/logo-nm-clean.png" type="image/png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page-portfolio">
-  <header class="navbar navbar--scrolled">
-    <nav class="navbar__inner">
-      <a href="index.html" class="navbar__logo">
-        <img src="img/logo-nm-clean.png" alt="Logo" class="navbar__logo-img">
-        <span>Nikolai Martino</span>
-      </a>
-      <ul class="navbar__links">
-        <li><a href="portfolio.html" class="navbar__link">← Back to Projects</a></li>
+<body>
+
+  <!-- ======================================================
+       NAVBAR
+       ====================================================== -->
+  <header class="navbar navbar--solid" role="banner">
+    <nav class="navbar__inner" aria-label="Navigazione principale">
+      <ul class="navbar__links navbar__links--left" role="list">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="bio.html" class="navbar__link">Bio</a></li>
       </ul>
+      <a href="index.html" class="navbar__logo" aria-label="Nikolai Martino — Homepage">
+        <img src="img/logo/logo-nm-clean.png" alt="Logo NM" class="navbar__logo-img">
+      </a>
+      <ul class="navbar__links navbar__links--right" role="list">
+        <li><a href="portfolio.html" class="navbar__link active" aria-current="page">Portfolio</a></li>
+        <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
+      </ul>
+      <button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Apri menu">☰</button>
     </nav>
+    <div class="navbar__mobile" id="navbar-menu">
+      <ul class="navbar__mobile-links" role="list">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="bio.html" class="navbar__link">Bio</a></li>
+        <li><a href="portfolio.html" class="navbar__link active">Portfolio</a></li>
+        <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
+      </ul>
+    </div>
   </header>
 
-  <main class="container project-detail">
-    <header class="portfolio-header">
-      <h1 class="portfolio-title">Adobe Illustrator</h1>
-      <p class="portfolio-subtitle">Portfolio Esame Illustrator</p>
-    </header>
-    
-    <div style="margin-top: 2rem; text-align: center;">
-      <iframe src="progetti%20/portfolio%20illustrator%20/portfolio_esame%20copia%20copia.pdf" width="100%" height="1000px" style="border-radius: 12px; border: none; background: #fff;"></iframe>
-      <br><br>
-      <a href="progetti%20/portfolio%20illustrator%20/portfolio_esame%20copia%20copia.pdf" class="btn btn--primary" download>Scarica Portfolio PDF</a>
+  <main id="main-content">
+
+    <!-- ====================================================
+         PROJECT HEADER
+         ==================================================== -->
+    <section class="pv-hero" aria-labelledby="il-heading">
+      <div class="container">
+
+        <a href="portfolio.html" class="pv-back">← Torna al Portfolio</a>
+
+        <div class="pv-hero__meta">
+          <span class="pv-hero__tag">Illustrator</span>
+          <span class="pv-hero__dot" aria-hidden="true">·</span>
+          <span class="pv-hero__year">2025 — IED Roma</span>
+        </div>
+
+        <h1 class="pv-hero__title" id="il-heading">Dalla Sfida alla Forma</h1>
+
+        <p class="pv-hero__sub">
+          Entrate nel mondo delle geometrie e della precisione. In questa gallery ho raccolto i frutti della mia ricerca su Illustrator: una selezione di lavori che celebrano la pulizia del segno e la potenza del colore. Vi invito a scoprire come ogni tracciato si trasforma in visione.
+        </p>
+
+        <div class="pv-hero__chips">
+          <span class="pv-chip">Adobe Illustrator</span>
+          <span class="pv-chip">Type Design</span>
+          <span class="pv-chip">Logo Design</span>
+          <span class="pv-chip">Vector Art</span>
+          <span class="pv-chip">Poster Campaign</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="bio-page-divider" aria-hidden="true">
+      <span class="bio-page-divider__line"></span>
+      <span class="bio-page-divider__ornament">◆</span>
+      <span class="bio-page-divider__line"></span>
     </div>
+
+    <!-- ====================================================
+         SEZIONE I — TYPE MODULARE
+         ==================================================== -->
+    <section class="pv-section ps-gallery-section" aria-labelledby="il-type-heading">
+      <div class="container">
+
+        <div class="pv-section__header">
+          <span class="pv-section__num" aria-hidden="true">I</span>
+          <div>
+            <p class="pv-section__label">Alfabeto vettoriale</p>
+            <h2 class="pv-section__title" id="il-type-heading">Type Modulare</h2>
+          </div>
+        </div>
+
+        <p class="pv-section__desc">
+          Un esercizio di precisione e creatività suddiviso in due fasi. La prima sezione comprende la riproduzione tecnica di griglie modulari (costruzione, positivo, negativo e colore) su modelli didattici forniti dal professore. Le tavole conclusive mostrano invece l'output finale: un alfabeto originale da me inventato, un sistema di segni coerente presentato nelle sue declinazioni Light e Dark.
+        </p>
+
+        <div class="ps-gallery ps-gallery--landscape-3">
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-03.png" data-caption="Type Modulare — Costruzione Geometrica: la griglia strutturale dei glifi" aria-label="Apri immagine: Type Modulare Costruzione Geometrica">
+              <img src="img/esame%20illustrator/pages/page-03.png" alt="Type Modulare — Costruzione Geometrica, Illustrator IED Roma" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Costruzione Geometrica</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-04.png" data-caption="Type Modulare — Costruzione in Positivo: forme piene in nero su bianco" aria-label="Apri immagine: Type Modulare Positivo">
+              <img src="img/esame%20illustrator/pages/page-04.png" alt="Type Modulare — Costruzione in Positivo, Illustrator IED Roma" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Costruzione in Positivo</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-05.png" data-caption="Type Modulare — Costruzione in Negativo: forme bianche su sfondo nero" aria-label="Apri immagine: Type Modulare Negativo">
+              <img src="img/esame%20illustrator/pages/page-05.png" alt="Type Modulare — Costruzione in Negativo, Illustrator IED Roma" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Costruzione in Negativo</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-06.png" data-caption="Type Modulare — Costruzione a Colori: ogni glifo con palette cromatica individuale" aria-label="Apri immagine: Type Modulare a Colori">
+              <img src="img/esame%20illustrator/pages/page-06.png" alt="Type Modulare — A Colori, Illustrator IED Roma" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">A Colori</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-08.png" data-caption="Type Modulare — Alfabeto completo in positivo, dalla A alla Z" aria-label="Apri immagine: Alfabeto Positivo">
+              <img src="img/esame%20illustrator/pages/page-08.png" alt="Type Modulare — Alfabeto Positivo, Illustrator IED Roma" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Alfabeto — Positivo</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-09.png" data-caption="Type Modulare — Alfabeto completo in negativo, dalla A alla Z" aria-label="Apri immagine: Alfabeto Negativo">
+              <img src="img/esame%20illustrator/pages/page-09.png" alt="Type Modulare — Alfabeto Negativo, Illustrator IED Roma" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Alfabeto — Negativo</figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="bio-page-divider" aria-hidden="true">
+      <span class="bio-page-divider__line"></span>
+      <span class="bio-page-divider__ornament">◆</span>
+      <span class="bio-page-divider__line"></span>
+    </div>
+
+    <!-- ====================================================
+         SEZIONE II — LOGO DESIGN
+         ==================================================== -->
+    <section class="pv-section ps-gallery-section" aria-labelledby="il-logo-heading">
+      <div class="container">
+
+        <div class="pv-section__header">
+          <span class="pv-section__num" aria-hidden="true">II</span>
+          <div>
+            <p class="pv-section__label">Costruzione vettoriale</p>
+            <h2 class="pv-section__title" id="il-logo-heading">Logo Design</h2>
+          </div>
+        </div>
+
+        <p class="pv-section__desc">
+          Tre loghi costruiti da zero con rigore geometrico. Ogni forma nasce dalla sezione aurea, viene poi declinata in positivo, negativo e a colori — un processo che rivela come la matematica e l'estetica possano convivere in perfetto equilibrio.
+        </p>
+
+        <!-- Sub-group: Lettera "a" -->
+        <div class="ps-logo-group">
+          <p class="ps-logo-group__label">Logo 01</p>
+          <h3 class="ps-logo-group__title">Lettera <em>a</em></h3>
+        </div>
+
+        <div class="ps-gallery ps-gallery--landscape-4">
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-11.png" data-caption='Logo "a" — Costruzione Geometrica: cerchi e proporzioni matematiche' aria-label='Apri immagine: Logo a Costruzione Geometrica'>
+              <img src="img/esame%20illustrator/pages/page-11.png" alt='Logo "a" — Costruzione Geometrica, Illustrator IED Roma' class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Costruzione Geometrica</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-12.png" data-caption='Logo "a" — Costruzione in Positivo: forma piena nera' aria-label='Apri immagine: Logo a Positivo'>
+              <img src="img/esame%20illustrator/pages/page-12.png" alt='Logo "a" — Positivo, Illustrator IED Roma' class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Positivo</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-13.png" data-caption='Logo "a" — Costruzione in Negativo: forma bianca su quadrato nero' aria-label='Apri immagine: Logo a Negativo'>
+              <img src="img/esame%20illustrator/pages/page-13.png" alt='Logo "a" — Negativo, Illustrator IED Roma' class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Negativo</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-14.png" data-caption='Logo "a" — A Sfumatura: gradiente tridimensionale verde' aria-label='Apri immagine: Logo a Sfumatura'>
+              <img src="img/esame%20illustrator/pages/page-14.png" alt='Logo "a" — A Sfumatura, Illustrator IED Roma' class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">A Sfumatura</figcaption>
+          </figure>
+        </div>
+
+        <!-- Sub-group: Numero "8" -->
+        <div class="ps-logo-group">
+          <p class="ps-logo-group__label">Logo 02</p>
+          <h3 class="ps-logo-group__title">Numero <em>8</em></h3>
+        </div>
+
+        <div class="ps-gallery ps-gallery--landscape-5">
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-16.png" data-caption='Logo "8" — Sezione Aurea: costruzione basata sul rettangolo aureo' aria-label='Apri immagine: Logo 8 Sezione Aurea'>
+              <img src="img/esame%20illustrator/pages/page-16.png" alt='Logo "8" — Sezione Aurea, Illustrator IED Roma' class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Sezione Aurea</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-17.png" data-caption='Logo "8" — Costruzione Geometrica: cerchi sovrapposti sulla griglia' aria-label='Apri immagine: Logo 8 Costruzione Geometrica'>
+              <img src="img/esame%20illustrator/pages/page-17.png" alt='Logo "8" — Costruzione Geometrica, Illustrator IED Roma' class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Costruzione Geometrica</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-18.png" data-caption='Logo "8" — Costruzione in Positivo: forma piena nera' aria-label='Apri immagine: Logo 8 Positivo'>
+              <img src="img/esame%20illustrator/pages/page-18.png" alt='Logo "8" — Positivo, Illustrator IED Roma' class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Positivo</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-19.png" data-caption='Logo "8" — Costruzione in Negativo: forma bianca su quadrato nero' aria-label='Apri immagine: Logo 8 Negativo'>
+              <img src="img/esame%20illustrator/pages/page-19.png" alt='Logo "8" — Negativo, Illustrator IED Roma' class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Negativo</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-20.png" data-caption='Logo "8" — A Sfumatura: gradiente tridimensionale blu' aria-label='Apri immagine: Logo 8 Sfumatura'>
+              <img src="img/esame%20illustrator/pages/page-20.png" alt='Logo "8" — A Sfumatura, Illustrator IED Roma' class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">A Sfumatura</figcaption>
+          </figure>
+        </div>
+
+        <!-- Sub-group: Monogramma NM -->
+        <div class="ps-logo-group">
+          <p class="ps-logo-group__label">Logo 03</p>
+          <h3 class="ps-logo-group__title">Il mio logo personale</h3>
+        </div>
+
+        <div class="ps-gallery ps-gallery--landscape-4">
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-22.png" data-caption='Monogramma NM — Costruzione Geometrica su griglia triangolare' aria-label='Apri immagine: Monogramma NM Costruzione Geometrica'>
+              <img src="img/esame%20illustrator/pages/page-22.png" alt="Monogramma NM — Costruzione Geometrica, Illustrator IED Roma" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Costruzione Geometrica</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-23.png" data-caption="Monogramma NM — Costruzione in Positivo: M e N intrecciate, forma piena" aria-label="Apri immagine: Monogramma NM Positivo">
+              <img src="img/esame%20illustrator/pages/page-23.png" alt="Monogramma NM — Positivo, Illustrator IED Roma" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Positivo</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-24.png" data-caption="Monogramma NM — Costruzione in Negativo: forma bianca su quadrato nero" aria-label="Apri immagine: Monogramma NM Negativo">
+              <img src="img/esame%20illustrator/pages/page-24.png" alt="Monogramma NM — Negativo, Illustrator IED Roma" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Negativo</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-25.png" data-caption="Monogramma NM — A Colori: arancio/blu navy, versione brand" aria-label="Apri immagine: Monogramma NM a Colori">
+              <img src="img/esame%20illustrator/pages/page-25.png" alt="Monogramma NM — A Colori, Illustrator IED Roma" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">A Colori</figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="bio-page-divider" aria-hidden="true">
+      <span class="bio-page-divider__line"></span>
+      <span class="bio-page-divider__ornament">◆</span>
+      <span class="bio-page-divider__line"></span>
+    </div>
+
+    <!-- ====================================================
+         SEZIONE III — MULTISOGGETTO "YES, I IED"
+         ==================================================== -->
+    <section class="pv-section ps-gallery-section" aria-labelledby="il-multi-heading">
+      <div class="container">
+
+        <div class="pv-section__header">
+          <span class="pv-section__num" aria-hidden="true">III</span>
+          <div>
+            <p class="pv-section__label">Poster campaign</p>
+            <h2 class="pv-section__title" id="il-multi-heading">Multisoggetto — <em>Yes, I IED</em></h2>
+          </div>
+        </div>
+
+        <p class="pv-section__desc">
+          Una serie di poster in stile editoriale che esplorano l'identità attraverso il gesto. Quattro variazioni dello stesso concept: mani sul viso, occhi nascosti e rivelati allo stesso tempo, con il claim "YES, I IED" come fil rouge.
+        </p>
+
+        <div class="ps-gallery ps-gallery--landscape-4">
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-27.png" data-caption="Yes, I IED — Soggetto maschile: mani sul viso, identità nascosta e svelata" aria-label="Apri immagine: Yes I IED Uomo">
+              <img src="img/esame%20illustrator/pages/page-27.png" alt="Yes I IED — Soggetto Maschile, Illustrator IED Roma" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Soggetto Maschile</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-28.png" data-caption="Yes, I IED — Soggetto femminile I: mani che coprono il volto, sguardo tra le dita" aria-label="Apri immagine: Yes I IED Donna I">
+              <img src="img/esame%20illustrator/pages/page-28.png" alt="Yes I IED — Soggetto Femminile I, Illustrator IED Roma" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Soggetto Femminile — I</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-29.png" data-caption="Yes, I IED — Soggetto femminile II: espressione intensa, bocca aperta" aria-label="Apri immagine: Yes I IED Donna II">
+              <img src="img/esame%20illustrator/pages/page-29.png" alt="Yes I IED — Soggetto Femminile II, Illustrator IED Roma" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Soggetto Femminile — II</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-30.png" data-caption="Yes, I IED — Soggetto femminile III: circuiti digitali sovrapposti al volto" aria-label="Apri immagine: Yes I IED Donna III">
+              <img src="img/esame%20illustrator/pages/page-30.png" alt="Yes I IED — Soggetto Femminile III, Illustrator IED Roma" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Soggetto Femminile — III</figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="bio-page-divider" aria-hidden="true">
+      <span class="bio-page-divider__line"></span>
+      <span class="bio-page-divider__ornament">◆</span>
+      <span class="bio-page-divider__line"></span>
+    </div>
+
+    <!-- ====================================================
+         SEZIONE IV — MULTISOGGETTO TIPOGRAFICO
+         ==================================================== -->
+    <section class="pv-section ps-gallery-section" aria-labelledby="il-tipo-heading">
+      <div class="container">
+
+        <div class="pv-section__header">
+          <span class="pv-section__num" aria-hidden="true">IV</span>
+          <div>
+            <p class="pv-section__label">Poster tipografici</p>
+            <h2 class="pv-section__title" id="il-tipo-heading">Multisoggetto Tipografico</h2>
+          </div>
+        </div>
+
+        <p class="pv-section__desc">
+          Tre poster che promuovono i corsi IED attraverso il puro linguaggio tipografico. La stessa struttura declinata in tre identità cromatiche: la parola diventa immagine, il testo diventa texture.
+        </p>
+
+        <div class="ps-gallery ps-gallery--landscape-3">
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-32.png" data-caption="Poster IED — Media Design: tipografia ripetuta in fade su sfondo chiaro" aria-label="Apri immagine: Poster Media Design">
+              <img src="img/esame%20illustrator/pages/page-32.png" alt="Poster IED Media Design — Multisoggetto Tipografico, Illustrator IED Roma" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Media Design</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-33.png" data-caption="Poster IED — Sound Design: tipografia ripetuta su sfondo nero, teal vibrante" aria-label="Apri immagine: Poster Sound Design">
+              <img src="img/esame%20illustrator/pages/page-33.png" alt="Poster IED Sound Design — Multisoggetto Tipografico, Illustrator IED Roma" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Sound Design</figcaption>
+          </figure>
+
+          <figure class="ps-gallery__item">
+            <button class="ps-gallery__btn" data-img="img/esame%20illustrator/pages/page-34.png" data-caption="Poster IED — Video Design: tipografia ripetuta su sfondo nero, viola intenso" aria-label="Apri immagine: Poster Video Design">
+              <img src="img/esame%20illustrator/pages/page-34.png" alt="Poster IED Video Design — Multisoggetto Tipografico, Illustrator IED Roma" class="ps-gallery__img" loading="lazy">
+              <div class="ps-gallery__overlay" aria-hidden="true"><span class="ps-gallery__zoom">⊕</span></div>
+            </button>
+            <figcaption class="ps-gallery__cap">Video Design</figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="bio-page-divider" aria-hidden="true">
+      <span class="bio-page-divider__line"></span>
+      <span class="bio-page-divider__ornament">◆</span>
+      <span class="bio-page-divider__line"></span>
+    </div>
+
+    <!-- Back to portfolio -->
+    <div class="pv-footer-nav">
+      <a href="portfolio.html" class="btn btn--outline">← Torna al Portfolio</a>
+    </div>
+
   </main>
 
-  <footer class="footer">
+  <!-- ======================================================
+       LIGHTBOX
+       ====================================================== -->
+  <div id="ps-lightbox" class="ps-lightbox" role="dialog" aria-modal="true" aria-label="Visualizzatore immagine" hidden>
+    <button class="ps-lightbox__close" id="ps-lightbox-close" aria-label="Chiudi">✕</button>
+    <div class="ps-lightbox__backdrop" id="ps-lightbox-backdrop"></div>
+    <figure class="ps-lightbox__figure">
+      <img src="" alt="" class="ps-lightbox__img" id="ps-lightbox-img">
+      <figcaption class="ps-lightbox__cap" id="ps-lightbox-cap"></figcaption>
+    </figure>
+  </div>
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="footer" role="contentinfo">
     <div class="container">
-      <p>&copy; 2025 Nikolai Martino</p>
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">Nikolai Martino</p>
+          <p class="footer__tagline">Media Designer · Roma</p>
+                    <div class="footer__social">
+            <a href="https://www.linkedin.com/in/nikolai-martino-71b693373/" class="footer__social-link" aria-label="LinkedIn di Nikolai Martino" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.behance.net/nikolaimartino/moodboards" class="footer__social-link" aria-label="Behance di Nikolai Martino" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.72zm-7.249-2h4.099c-.011-.474-.091-.925-.233-1.31-.347-.968-1.152-1.51-2.057-1.51-.966 0-1.868.542-2.246 1.51-.181.462-.277.925-.287 1.31h.724zm-11.178 0l-3.299-2.08V15h-3V9.001h5.001c2.001 0 3.001 1 3.001 3s-1 3-3.001 3h-2V15h2l3.299 2.08V15zm-3.299-4H3v2h2.001c.553 0 1.001-.448 1.001-1s-.448-1-1.001-1z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/_nikomartino_/" class="footer__social-link" aria-label="Instagram di Nikolai Martino" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+          </div>
+</div>
+        <nav aria-label="Navigazione footer">
+          <p class="footer__heading">Navigazione</p>
+          <ul class="footer__nav">
+            <li><a href="index.html" class="footer__nav-link">Home</a></li>
+            <li><a href="bio.html" class="footer__nav-link">Bio</a></li>
+            <li><a href="portfolio.html" class="footer__nav-link">Portfolio</a></li>
+            <li><a href="contatti.html" class="footer__nav-link">Contatti</a></li>
+          </ul>
+        </nav>
+                <div>
+          <p class="footer__heading">Contatti</p>
+          <p class="footer__contact-item"><a href="mailto:nikolaimartino05@gmail.com">nikolaimartino05@gmail.com</a></p>
+          <p class="footer__contact-item"><a href="tel:+390612345678">+39 06 1234 5678</a></p>
+          <p class="footer__contact-item">Roma, Italia</p>
+          <p class="footer__contact-item">Lun–Ven, 9:00–18:00</p>
+        </div>
+
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Nikolai Martino — Tutti i diritti riservati</p>
+        <a href="privacy.html" class="footer__privacy-link">Privacy Policy &amp; Cookie</a>
+      </div>
     </div>
   </footer>
+
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="cookie-banner" role="alert">
+    <div class="cookie-banner__inner">
+      <p class="cookie-banner__text">Questo sito utilizza cookie tecnici. <a href="privacy.html">Cookie Policy</a>.</p>
+      <div class="cookie-banner__actions">
+        <button id="accept-cookies" class="btn btn--primary">Accetta</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

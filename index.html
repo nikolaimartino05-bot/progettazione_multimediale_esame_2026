@@ -4,131 +4,410 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Nikolai Martino — Portfolio</title>
-  <meta name="description" content="Portfolio di Nikolai Martino, studente di Media Design con passione per la comunicazione visiva, il design e la pubblicità.">
+  <title>Nikolai Martino — Media Design &amp; Comunicazione Visiva</title>
+  <meta name="description" content="Portfolio di Nikolai Martino, Media Designer e comunicatore visivo. Scopri i miei progetti di design grafico, fotografia, video e identità visiva.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nikolai Martino — Media Design &amp; Comunicazione Visiva">
+  <meta property="og:description" content="Portfolio di Nikolai Martino: design grafico, fotografia, video e comunicazione visiva.">
+  <meta property="og:image" content="img/sfondi/6d97480f8cc3a6fc907459154ebf308b.jpg">
+  <meta property="og:url" content="https://nikolaimartino.com/index.html">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/logo/logo-nm-clean.png" type="image/png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <!-- ======================================================
+       NAVBAR — split design with center logo
+       ====================================================== -->
   <header class="navbar" role="banner">
     <nav class="navbar__inner" aria-label="Navigazione principale">
 
-      <a href="index.html" class="navbar__logo" aria-label="Torna alla home">
-        <img src="img/logo-nm-clean.png" alt="Logo Nikolai Martino" class="navbar__logo-img">
-        <span>Nikolai Martino</span>
+      <!-- Left links (desktop) -->
+      <ul class="navbar__links navbar__links--left" role="list">
+        <li><a href="index.html" class="navbar__link active" aria-current="page">Home</a></li>
+        <li><a href="bio.html" class="navbar__link">Bio</a></li>
+      </ul>
+
+      <!-- Center: logo -->
+      <a href="index.html" class="navbar__logo" aria-label="Nikolai Martino — Homepage">
+        <img src="img/logo/logo-nm-clean.png" alt="Logo NM" class="navbar__logo-img">
       </a>
 
+      <!-- Right links (desktop) -->
+      <ul class="navbar__links navbar__links--right" role="list">
+        <li><a href="portfolio.html" class="navbar__link">Portfolio</a></li>
+        <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
+      </ul>
+
+      <!-- Mobile hamburger -->
       <button
         class="navbar__toggle"
         aria-expanded="false"
         aria-controls="navbar-menu"
         aria-label="Apri menu di navigazione"
-      >
-        ☰
-      </button>
+      >☰</button>
 
-      <ul class="navbar__links" id="navbar-menu" role="list">
-        <li><a href="index.html" class="navbar__link active" aria-current="page">Home</a></li>
+    </nav>
+
+    <!-- Mobile dropdown menu -->
+    <div class="navbar__mobile" id="navbar-menu">
+      <ul class="navbar__mobile-links" role="list">
+        <li><a href="index.html" class="navbar__link active">Home</a></li>
         <li><a href="bio.html" class="navbar__link">Bio</a></li>
         <li><a href="portfolio.html" class="navbar__link">Portfolio</a></li>
         <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
       </ul>
-
-    </nav>
+    </div>
   </header>
 
   <main id="main-content">
 
-    <section class="hero" aria-label="Presentazione">
-      <div class="hero__content">
-        <div class="hero__avatar" role="img" aria-label="Foto profilo di Nikolai Martino"></div>
-        <h1 class="hero__name">Nikolai Martino</h1>
-        <h2 class="hero__title">Media Design &amp; Comunicazione Visiva</h2>
-        <a href="portfolio.html" class="btn btn--primary hero__cta">Scopri i miei lavori</a>
+    <!-- ====================================================
+         SITE HERO — Alex Fisher style: big name + rotating badge
+         ==================================================== -->
+    <section class="site-hero" aria-labelledby="hero-heading">
+
+      <!-- Background video -->
+      <video
+        class="site-hero__video"
+        src="img/sfondi/14081587_1920_1080_60fps.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+        aria-hidden="true"
+      ></video>
+      <div class="site-hero__video-overlay" aria-hidden="true"></div>
+
+      <!-- Hidden semantic h1 for SEO (visual text is in spans below) -->
+      <h1 id="hero-heading" class="sr-only">Nikolai Martino — Media Designer e Comunicatore Visivo</h1>
+
+      <div class="site-hero__name-wrap">
+
+        <!-- Rotating badge with logo in center -->
+        <div class="site-hero__badge-wrap">
+
+          <!-- SVG ring with rotating text -->
+          <svg
+            class="site-hero__ring"
+            viewBox="0 0 400 400"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <defs>
+              <path
+                id="badge-ring-path"
+                d="M 200,200 m -168,0 a 168,168 0 1,1 336,0 a 168,168 0 1,1 -336,0"
+              />
+            </defs>
+            <text class="site-hero__ring-text" textLength="1056" lengthAdjust="spacing">
+              <textPath href="#badge-ring-path" startOffset="0%">
+                · MEDIA DESIGN · COMUNICAZIONE VISIVA · NIKOLAI MARTINO · MEDIA DESIGN · COMUNICAZIONE VISIVA ·
+              </textPath>
+            </text>
+          </svg>
+
+          <!-- Name in center — static while ring rotates -->
+          <div class="site-hero__badge-logo">
+            <span class="site-hero__badge-line"></span>
+            <span class="site-hero__badge-name">NIKOLAI<br>MARTINO</span>
+            <span class="site-hero__badge-line"></span>
+          </div>
+
+        </div>
+
       </div>
+
+      <!-- Scroll hint -->
+      <a href="#work-scroll-heading" class="site-hero__scroll" aria-label="Scorri verso i progetti">
+        <span class="site-hero__scroll-label">Scroll</span>
+        <span class="site-hero__scroll-arrow"></span>
+      </a>
+
     </section>
 
-    <!-- Anteprima portfolio -->
-    <section class="section preview" aria-labelledby="preview-heading">
+    <!-- ====================================================
+         LAVORI IN SCORRIMENTO — horizontal auto-scroll strip
+         ==================================================== -->
+    <section class="work-scroll" aria-labelledby="work-scroll-heading">
+
+      <div class="work-scroll__header">
+        <span class="work-scroll__diamond">◆</span>
+        <h2 class="work-scroll__heading" id="work-scroll-heading">Lavori</h2>
+        <span class="work-scroll__diamond">◆</span>
+      </div>
+
+      <div class="work-scroll__viewport">
+        <div class="work-scroll__track">
+
+          <!-- Set 1 -->
+          <a href="portfolio-liceo.html" class="work-scroll__card" aria-label="Apri progetto Liceo Artistico Caravaggio">
+            <img src="img/liceo%20artistico%20caravaggio/IMG_4110.jpg" alt="Liceo Artistico Caravaggio">
+            <div class="work-scroll__overlay">
+              <p class="work-scroll__tag">Formazione artistica</p>
+              <h3 class="work-scroll__title">Liceo Artistico Caravaggio</h3>
+              <span class="work-scroll__cta">Apri progetto →</span>
+            </div>
+          </a>
+
+          <a href="portfolio-photoshop.html" class="work-scroll__card" aria-label="Apri progetto Esame Photoshop">
+            <img src="img/esame%20phothoshop/IKEA.jpeg" alt="Esame Photoshop">
+            <div class="work-scroll__overlay">
+              <p class="work-scroll__tag">Grafica digitale</p>
+              <h3 class="work-scroll__title">Esame Photoshop</h3>
+              <span class="work-scroll__cta">Apri progetto →</span>
+            </div>
+          </a>
+
+          <a href="portfolio-illustrator.html" class="work-scroll__card" aria-label="Apri progetto Esame Illustrator">
+            <img src="img/esame%20illustrator/Screenshot%202026-05-10%20alle%2013.46.01.png" alt="Esame Illustrator">
+            <div class="work-scroll__overlay">
+              <p class="work-scroll__tag">Illustrazione vettoriale</p>
+              <h3 class="work-scroll__title">Esame Illustrator</h3>
+              <span class="work-scroll__cta">Apri progetto →</span>
+            </div>
+          </a>
+
+          <a href="portfolio-video.html" class="work-scroll__card" aria-label="Apri progetto Esame Video Editing">
+            <img src="img/esame%20video/Screenshot%202026-05-10%20alle%2013.44.56.png" alt="Esame Video Editing">
+            <div class="work-scroll__overlay">
+              <p class="work-scroll__tag">Video editing</p>
+              <h3 class="work-scroll__title">Esame Video Editing</h3>
+              <span class="work-scroll__cta">Apri progetto →</span>
+            </div>
+          </a>
+
+          <!-- Set 2 — duplicate for seamless loop -->
+          <a href="portfolio-liceo.html" class="work-scroll__card" aria-hidden="true" tabindex="-1">
+            <img src="img/liceo%20artistico%20caravaggio/IMG_4110.jpg" alt="">
+            <div class="work-scroll__overlay">
+              <p class="work-scroll__tag">Formazione artistica</p>
+              <h3 class="work-scroll__title">Liceo Artistico Caravaggio</h3>
+              <span class="work-scroll__cta">Apri progetto →</span>
+            </div>
+          </a>
+
+          <a href="portfolio-photoshop.html" class="work-scroll__card" aria-hidden="true" tabindex="-1">
+            <img src="img/esame%20phothoshop/IKEA.jpeg" alt="">
+            <div class="work-scroll__overlay">
+              <p class="work-scroll__tag">Grafica digitale</p>
+              <h3 class="work-scroll__title">Esame Photoshop</h3>
+              <span class="work-scroll__cta">Apri progetto →</span>
+            </div>
+          </a>
+
+          <a href="portfolio-illustrator.html" class="work-scroll__card" aria-hidden="true" tabindex="-1">
+            <img src="img/esame%20illustrator/Screenshot%202026-05-10%20alle%2013.46.01.png" alt="">
+            <div class="work-scroll__overlay">
+              <p class="work-scroll__tag">Illustrazione vettoriale</p>
+              <h3 class="work-scroll__title">Esame Illustrator</h3>
+              <span class="work-scroll__cta">Apri progetto →</span>
+            </div>
+          </a>
+
+          <a href="portfolio-video.html" class="work-scroll__card" aria-hidden="true" tabindex="-1">
+            <img src="img/esame%20video/Screenshot%202026-05-10%20alle%2013.44.56.png" alt="">
+            <div class="work-scroll__overlay">
+              <p class="work-scroll__tag">Video editing</p>
+              <h3 class="work-scroll__title">Esame Video Editing</h3>
+              <span class="work-scroll__cta">Apri progetto →</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         BIO — Alex Fisher style
+         ==================================================== -->
+    <section class="bio-hero" aria-labelledby="bio-hero-heading">
+
+      <!-- Top ornamental divider -->
+      <div class="bio-hero__divider" aria-hidden="true">
+        <span class="bio-hero__divider-line"></span>
+        <span class="bio-hero__divider-diamond">◆</span>
+        <span class="bio-hero__divider-line"></span>
+      </div>
+
+      <div class="bio-hero__inner">
+
+        <!-- Left: text -->
+        <div class="bio-hero__text">
+          <h2 class="bio-hero__greeting" id="bio-hero-heading">Ciao!</h2>
+          <p class="bio-hero__body">
+            Ciao, sono <strong>Nikolai Martino</strong> — ho 20 anni, vivo a Roma e frequento attualmente il corso di Media Design allo <strong>IED — Istituto Europeo di Design</strong>. La mia formazione ha radici nel Liceo Artistico, dove ho sviluppato un occhio attento alla composizione, al colore e alla forma.
+          </p>
+          <p class="bio-hero__body">
+            Credo che il design sia prima di tutto comunicazione: ogni scelta visiva racconta qualcosa. Mi interessa lavorare su progetti con un'identità forte — dalla grafica editoriale all'identità visiva, dal motion alla UI.
+          </p>
+          <p class="bio-hero__body">
+            Utilizzo <strong>Photoshop, Illustrator, Figma, DaVinci Resolve</strong> e After Effects, e sono costantemente alla ricerca di nuovi strumenti e linguaggi da aggiungere al mio repertorio — perché imparare, per me, è parte del processo creativo.
+          </p>
+          <div class="bio-hero__actions">
+            <a href="bio.html" class="btn btn--outline bio-hero__btn">Scopri di più</a>
+            <a href="img/cv/CV_Nikolai_Martino.pdf" download class="btn btn--ghost bio-hero__btn">↓ Scarica il CV</a>
+          </div>
+        </div>
+
+        <!-- Right: photo -->
+        <div class="bio-hero__photo-wrap">
+          <div class="bio-hero__photo-arch">
+            <img
+              src="img/foto/nikolai-profile.png"
+              alt="Nikolai Martino a Parigi con la Tour Eiffel sullo sfondo"
+              class="bio-hero__photo"
+            >
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom ornamental divider -->
+      <div class="bio-hero__divider" aria-hidden="true">
+        <span class="bio-hero__divider-line"></span>
+        <span class="bio-hero__divider-diamond">◆</span>
+        <span class="bio-hero__divider-line"></span>
+      </div>
+
+    </section>
+
+    <!-- ====================================================
+         FORM DI CONTATTO
+         ==================================================== -->
+    <section class="section section--dark" aria-labelledby="contact-form-heading">
       <div class="container">
 
-        <h2 class="preview__heading" id="preview-heading">Lavori selezionati</h2>
-        <p class="preview__sub text-muted">Una selezione di progetti che raccontano il mio percorso creativo.</p>
+        <h2 class="text-center" id="contact-form-heading">Hai un progetto in mente?</h2>
+        <p class="text-center section-intro-text">
+          Scrivimi un messaggio, sarò felice di discutere come posso aiutarti a dare forma alla tua idea.
+        </p>
 
-        <ul class="preview__grid" role="list">
+        <form class="form form--dark form-container" method="post" novalidate>
 
-          <li class="card">
-            <a href="lavoro-1.html" class="card__link" aria-label="Vai al progetto Erasmus 2023/2024">
-              <img
-                class="card__img"
-                src="img/IMG_9769.jpeg"
-                alt="Immagini e ricordi del progetto Erasmus 2023/2024"
-                loading="lazy"
-              >
-              <div class="card__body">
-                <p class="card__tag text-muted">Esperienza internazionale</p>
-                <h3 class="card__title">Erasmus 2023/2024</h3>
-                <p class="card__desc">Un anno all'estero tra cultura, design e nuove prospettive visive.</p>
-              </div>
-            </a>
-          </li>
+          <div class="form__row form__row--2">
+            <div class="form__group">
+              <label class="form__label form__label--white" for="nome-home">Nome *</label>
+              <input class="form__input" type="text" id="nome-home" name="nome" placeholder="Il tuo nome" required>
+            </div>
+            <div class="form__group">
+              <label class="form__label form__label--white" for="email-home">Email *</label>
+              <input class="form__input" type="email" id="email-home" name="email" placeholder="la.tua@email.com" required>
+            </div>
+          </div>
 
-          <li class="card">
-            <a href="lavoro-2.html" class="card__link" aria-label="Vai al progetto Liceo Artistico Caravaggio">
-              <img
-                class="card__img"
-                src="img/AF4D20D5-7E48-46F9-8F30-011CDE38D1F8.jpg"
-                alt="Lavori realizzati al Liceo Artistico Caravaggio"
-                loading="lazy"
-              >
-              <div class="card__body">
-                <p class="card__tag text-muted">Formazione artistica</p>
-                <h3 class="card__title">Liceo Artistico Caravaggio</h3>
-                <p class="card__desc">Il percorso formativo che ha costruito le basi del mio linguaggio visivo.</p>
-              </div>
-            </a>
-          </li>
+          <div class="form__group">
+            <label class="form__label form__label--white" for="oggetto-home">Oggetto *</label>
+            <input class="form__input" type="text" id="oggetto-home" name="oggetto" placeholder="Di cosa hai bisogno?" required>
+          </div>
 
-          <li class="card">
-            <a href="lavoro-3.html" class="card__link" aria-label="Vai al progetto Da Enzo al 29">
-              <img
-                class="card__img"
-                src="img/9faee6a9d58521f7d0015764c5b4f161f2074880-1312x1312.jpeg"
-                alt="Progetto fotografico e narrativo Da Enzo al 29"
-                loading="lazy"
-              >
-              <div class="card__body">
-                <p class="card__tag text-muted">Progetto personale</p>
-                <h3 class="card__title">Da Enzo al 29</h3>
-                <p class="card__desc">Un progetto intimo che esplora identità, memoria e appartenenza.</p>
-              </div>
-            </a>
-          </li>
+          <div class="form__group">
+            <label class="form__label form__label--white" for="messaggio-home">Messaggio *</label>
+            <textarea class="form__textarea" id="messaggio-home" name="messaggio" placeholder="Raccontami il tuo progetto..." required></textarea>
+          </div>
 
-        </ul>
+          <div class="form-submit">
+            <button type="submit" class="btn btn--primary">Invia messaggio</button>
+          </div>
 
-        <div class="preview__cta">
-          <a href="portfolio.html" class="btn btn--outline">Vedi tutti i lavori</a>
-        </div>
+        </form>
 
       </div>
     </section>
 
   </main>
 
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
   <footer class="footer" role="contentinfo">
     <div class="container">
-      <p>&copy; 2025 Nikolai Martino — Media Design</p>
+
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">Nikolai Martino</p>
+          <p class="footer__tagline">Media Designer · Roma</p>
+                    <div class="footer__social">
+            <a href="https://www.linkedin.com/in/nikolai-martino-71b693373/" class="footer__social-link" aria-label="LinkedIn di Nikolai Martino" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.behance.net/nikolaimartino/moodboards" class="footer__social-link" aria-label="Behance di Nikolai Martino" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.72zm-7.249-2h4.099c-.011-.474-.091-.925-.233-1.31-.347-.968-1.152-1.51-2.057-1.51-.966 0-1.868.542-2.246 1.51-.181.462-.277.925-.287 1.31h.724zm-11.178 0l-3.299-2.08V15h-3V9.001h5.001c2.001 0 3.001 1 3.001 3s-1 3-3.001 3h-2V15h2l3.299 2.08V15zm-3.299-4H3v2h2.001c.553 0 1.001-.448 1.001-1s-.448-1-1.001-1z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/_nikomartino_/" class="footer__social-link" aria-label="Instagram di Nikolai Martino" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+          </div>
+</div>
+
+        <nav aria-label="Navigazione footer">
+          <p class="footer__heading">Navigazione</p>
+          <ul class="footer__nav">
+            <li><a href="index.html" class="footer__nav-link">Home</a></li>
+            <li><a href="bio.html" class="footer__nav-link">Bio</a></li>
+            <li><a href="portfolio.html" class="footer__nav-link">Portfolio</a></li>
+            <li><a href="contatti.html" class="footer__nav-link">Contatti</a></li>
+          </ul>
+        </nav>
+
+                <div>
+          <p class="footer__heading">Contatti</p>
+          <p class="footer__contact-item"><a href="mailto:nikolaimartino05@gmail.com">nikolaimartino05@gmail.com</a></p>
+          <p class="footer__contact-item"><a href="tel:+390612345678">+39 06 1234 5678</a></p>
+          <p class="footer__contact-item">Roma, Italia</p>
+          <p class="footer__contact-item">Lun–Ven, 9:00–18:00</p>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Nikolai Martino — Tutti i diritti riservati</p>
+        <a href="privacy.html" class="footer__privacy-link">Privacy Policy &amp; Cookie</a>
+      </div>
+
     </div>
   </footer>
 
+  <!-- ======================================================
+       COOKIE BANNER
+       ====================================================== -->
+  <div id="cookie-banner" class="cookie-banner" role="alert" aria-live="polite">
+    <div class="cookie-banner__inner">
+      <p class="cookie-banner__text">
+        Questo sito utilizza cookie tecnici per garantire il corretto funzionamento.
+        Leggi la nostra <a href="privacy.html">Privacy Policy &amp; Cookie Policy</a> per saperne di più.
+      </p>
+      <div class="cookie-banner__actions">
+        <button id="accept-cookies" class="btn btn--primary">Accetta</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================
+       LIGHTBOX
+       ====================================================== -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Visualizzatore immagini">
+    <button class="lightbox__close" aria-label="Chiudi lightbox">&#10005;</button>
+    <div class="lightbox__content">
+      <button class="lightbox__prev" aria-label="Immagine precedente">&#8592;</button>
+      <img class="lightbox__img" src="" alt="">
+      <button class="lightbox__next" aria-label="Immagine successiva">&#8594;</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
-<script src="js/main.js"></script>
 </html>

@@ -1,4 +1,5 @@
 .DS_Store
 *.mov
 *.mp4
+!img/sfondi/14081587_1920_1080_60fps.mp4
 *.pdf
