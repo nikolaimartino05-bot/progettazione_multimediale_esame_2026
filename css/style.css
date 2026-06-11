@@ -1918,6 +1918,7 @@ figcaption {
 }
 
 .contatti-guide__label {
+  margin: 0;
   font-size: var(--size-xs);
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -2736,6 +2737,7 @@ figcaption {
 }
 
 .pv-next-project__label {
+  margin: 0;
   font-size: var(--size-xs);
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -3194,12 +3196,12 @@ figcaption {
 }
 
 .guide-cta-band__label {
+  margin: 0 0 0.5rem;
   font-size: var(--size-xs);
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--color-accent);
-  margin-bottom: 0.5rem;
   width: 100%;
   text-align: center;
 }
