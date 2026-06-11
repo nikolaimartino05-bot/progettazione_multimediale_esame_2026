@@ -23,17 +23,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/cookie-consent.js"></script>
 </head>
-<body>
+<body class="has-starfield">
+
+  <div class="starfield" id="starfield" aria-hidden="true"></div>
 
   <!-- ======================================================
        NAVBAR — split design with center logo
        ====================================================== -->
-  <header class="navbar navbar--solid" role="banner">
+  <header class="navbar navbar--solid">
     <nav class="navbar__inner" aria-label="Navigazione principale">
 
       <!-- Left links (desktop) -->
-      <ul class="navbar__links navbar__links--left" role="list">
+      <ul class="navbar__links navbar__links--left">
         <li><a href="index.html" class="navbar__link">Home</a></li>
         <li><a href="bio.html" class="navbar__link active" aria-current="page">Bio</a></li>
       </ul>
@@ -44,7 +47,7 @@
       </a>
 
       <!-- Right links (desktop) -->
-      <ul class="navbar__links navbar__links--right" role="list">
+      <ul class="navbar__links navbar__links--right">
         <li><a href="portfolio.html" class="navbar__link">Portfolio</a></li>
         <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
       </ul>
@@ -61,7 +64,7 @@
 
     <!-- Mobile dropdown menu -->
     <div class="navbar__mobile" id="navbar-menu">
-      <ul class="navbar__mobile-links" role="list">
+      <ul class="navbar__mobile-links">
         <li><a href="index.html" class="navbar__link">Home</a></li>
         <li><a href="bio.html" class="navbar__link active">Bio</a></li>
         <li><a href="portfolio.html" class="navbar__link">Portfolio</a></li>
@@ -101,46 +104,48 @@
         <!-- Flat grid: 2 columns, entries paired by row for aligned borders -->
         <div class="bio-grid">
 
-          <!-- Row 1: Headings -->
-          <h2 class="bio-col__heading">Esperienza</h2>
-          <h2 class="bio-col__heading">Istruzione</h2>
+          <div class="bio-col">
+            <h2 class="bio-col__heading">Esperienza</h2>
 
-          <!-- Row 2: First entries -->
-          <div class="bio-entry">
-            <div class="bio-entry__header">
-              <p class="bio-entry__place">Da Enzo al 29 — Trastevere, Roma</p>
-              <p class="bio-entry__year">Ogni estate</p>
+            <div class="bio-entry">
+              <div class="bio-entry__header">
+                <p class="bio-entry__place">Da Enzo al 29 — Trastevere, Roma</p>
+                <p class="bio-entry__year">Ogni estate</p>
+              </div>
+              <p class="bio-entry__role">Cameriere</p>
+              <p class="bio-entry__desc">Ogni estate lavoro come cameriere nella storica trattoria Da Enzo al 29 nel cuore di Trastevere. Un'esperienza che mi ha insegnato il valore del contatto umano, della gestione dello stress e del lavoro di squadra in un ambiente dinamico e autentico.</p>
             </div>
-            <p class="bio-entry__role">Cameriere</p>
-            <p class="bio-entry__desc">Ogni estate lavoro come cameriere nella storica trattoria Da Enzo al 29 nel cuore di Trastevere. Un'esperienza che mi ha insegnato il valore del contatto umano, della gestione dello stress e del lavoro di squadra in un ambiente dinamico e autentico.</p>
+
+            <div class="bio-entry">
+              <div class="bio-entry__header">
+                <p class="bio-entry__place">Anno all'estero — Irlanda</p>
+                <p class="bio-entry__year">2022 – 2023</p>
+              </div>
+              <p class="bio-entry__role">Studente in mobilità internazionale</p>
+              <p class="bio-entry__desc">Al quarto anno di liceo ho vissuto un anno in Irlanda. È stata un'esperienza che mi ha formato profondamente: ho imparato la lingua, ho imparato ad essere autonomo, ho conosciuto culture diverse e ho capito molto di me stesso. Tornare non era la stessa persona che era partita.</p>
+            </div>
           </div>
 
-          <div class="bio-entry">
-            <div class="bio-entry__header">
-              <p class="bio-entry__place">Liceo Artistico Caravaggio, Roma</p>
-              <p class="bio-entry__year">2020 – 2025</p>
-            </div>
-            <p class="bio-entry__role">Diploma in Arti Figurative — 2025</p>
-            <p class="bio-entry__desc">Cinque anni al Liceo Artistico Caravaggio di Roma, dove ho sviluppato le basi del mio linguaggio visivo: disegno, pittura, composizione e le prime esperienze con la grafica digitale. Mi sono diplomato nel 2025.</p>
-          </div>
+          <div class="bio-col">
+            <h2 class="bio-col__heading">Istruzione</h2>
 
-          <!-- Row 3: Second entries -->
-          <div class="bio-entry">
-            <div class="bio-entry__header">
-              <p class="bio-entry__place">Anno all'estero — Irlanda</p>
-              <p class="bio-entry__year">2022 – 2023</p>
+            <div class="bio-entry">
+              <div class="bio-entry__header">
+                <p class="bio-entry__place">Liceo Artistico Caravaggio, Roma</p>
+                <p class="bio-entry__year">2020 – 2025</p>
+              </div>
+              <p class="bio-entry__role">Diploma in Arti Figurative — 2025</p>
+              <p class="bio-entry__desc">Cinque anni al Liceo Artistico Caravaggio di Roma, dove ho sviluppato le basi del mio linguaggio visivo: disegno, pittura, composizione e le prime esperienze con la grafica digitale. Mi sono diplomato nel 2025.</p>
             </div>
-            <p class="bio-entry__role">Studente in mobilità internazionale</p>
-            <p class="bio-entry__desc">Al quarto anno di liceo ho vissuto un anno in Irlanda. È stata un'esperienza che mi ha formato profondamente: ho imparato la lingua, ho imparato ad essere autonomo, ho conosciuto culture diverse e ho capito molto di me stesso. Tornare non era la stessa persona che era partita.</p>
-          </div>
 
-          <div class="bio-entry">
-            <div class="bio-entry__header">
-              <p class="bio-entry__place">IED — Istituto Europeo di Design, Roma</p>
-              <p class="bio-entry__year">2025 – presente</p>
+            <div class="bio-entry">
+              <div class="bio-entry__header">
+                <p class="bio-entry__place">IED — Istituto Europeo di Design, Roma</p>
+                <p class="bio-entry__year">2025 – presente</p>
+              </div>
+              <p class="bio-entry__role">Corso triennale di Media Design</p>
+              <p class="bio-entry__desc">Sto attualmente frequentando il corso di Media Design allo IED di Roma. Un percorso che unisce teoria del design, comunicazione visiva, motion e progettazione digitale. Ogni giorno imparo qualcosa di nuovo — e questo è esattamente il posto giusto per farlo.</p>
             </div>
-            <p class="bio-entry__role">Corso triennale di Media Design</p>
-            <p class="bio-entry__desc">Sto attualmente frequentando il corso di Media Design allo IED di Roma. Un percorso che unisce teoria del design, comunicazione visiva, motion e progettazione digitale. Ogni giorno imparo qualcosa di nuovo — e questo è esattamente il posto giusto per farlo.</p>
           </div>
 
         </div>
@@ -154,18 +159,27 @@
       <span class="bio-page-divider__line"></span>
     </div>
 
-    <!-- CTA buttons -->
-    <div class="bio-cta-row">
-      <a href="img/cv/CV.pdf" class="btn btn--outline" download>Scarica il CV</a>
-      <a href="portfolio.html" class="btn btn--primary">Vedi i miei lavori</a>
-    </div>
+    <!-- Guida: portfolio -->
+    <section class="guide-cta-band" aria-label="Esplora i progetti">
+      <div class="container">
+        <p class="guide-cta-band__label">Prossimo passo</p>
+        <p class="guide-cta-band__text">Ora che sai chi sono, esplora i progetti che raccontano il mio percorso — dal video editing alla grafica, fino alle opere del Liceo.</p>
+        <div class="guide-cta-band__actions">
+          <a href="portfolio.html" class="btn btn--primary">Esplora il portfolio →</a>
+          <a href="img/cv/CV.pdf" class="btn btn--outline" download>Scarica il CV</a>
+        </div>
+      </div>
+    </section>
 
-    <!-- Ornamental divider -->
-    <div class="bio-page-divider" aria-hidden="true">
-      <span class="bio-page-divider__line"></span>
-      <span class="bio-page-divider__ornament">◆</span>
-      <span class="bio-page-divider__line"></span>
-    </div>
+    <!-- Guida: contatti -->
+    <section class="pf-cta-section" aria-labelledby="bio-cta-heading">
+      <div class="container">
+        <p class="pf-cta__label">Ultimo passo</p>
+        <h2 class="pf-cta__heading" id="bio-cta-heading">Parliamone</h2>
+        <p class="pf-cta__sub">Hai un progetto in mente o vuoi collaborare? Scrivimi — rispondo entro 24 ore lavorative.</p>
+        <a href="contatti.html" class="btn btn--primary">Vai ai Contatti →</a>
+      </div>
+    </section>
 
   </main>
 
@@ -176,7 +190,7 @@
     <button class="lightbox__close" aria-label="Chiudi lightbox">&#10005;</button>
     <div class="lightbox__content">
       <button class="lightbox__prev" aria-label="Immagine precedente">&#8592;</button>
-      <img class="lightbox__img" src="" alt="">
+      <img class="lightbox__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
       <button class="lightbox__next" aria-label="Immagine successiva">&#8594;</button>
     </div>
   </div>
@@ -184,7 +198,7 @@
   <!-- ======================================================
        FOOTER
        ====================================================== -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container">
 
       <div class="footer__grid">
@@ -233,13 +247,15 @@
   </footer>
 
   <!-- Cookie Banner -->
-  <div id="cookie-banner" class="cookie-banner" role="alert">
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-banner-title" aria-live="polite">
     <div class="cookie-banner__inner">
-      <p class="cookie-banner__text">
-        Questo sito utilizza cookie tecnici. Leggi la nostra <a href="privacy.html">Cookie Policy</a>.
+      <p class="cookie-banner__text" id="cookie-banner-title">
+        Questo sito utilizza cookie tecnici per garantire il corretto funzionamento.
+        Leggi la <a href="privacy.html">Privacy &amp; Cookie Policy</a> per saperne di più.
       </p>
       <div class="cookie-banner__actions">
-        <button id="accept-cookies" class="btn btn--primary">Accetta</button>
+        <button id="reject-cookies" type="button" class="btn btn--outline-white">Rifiuta</button>
+        <button id="accept-cookies" type="button" class="btn btn--primary">Accetta</button>
       </div>
     </div>
   </div>

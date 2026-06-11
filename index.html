@@ -24,17 +24,18 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/cookie-consent.js"></script>
 </head>
-<body>
+<body class="page-home has-starfield">
 
   <!-- ======================================================
        NAVBAR — split design with center logo
        ====================================================== -->
-  <header class="navbar" role="banner">
+  <header class="navbar">
     <nav class="navbar__inner" aria-label="Navigazione principale">
 
       <!-- Left links (desktop) -->
-      <ul class="navbar__links navbar__links--left" role="list">
+      <ul class="navbar__links navbar__links--left">
         <li><a href="index.html" class="navbar__link active" aria-current="page">Home</a></li>
         <li><a href="bio.html" class="navbar__link">Bio</a></li>
       </ul>
@@ -45,7 +46,7 @@
       </a>
 
       <!-- Right links (desktop) -->
-      <ul class="navbar__links navbar__links--right" role="list">
+      <ul class="navbar__links navbar__links--right">
         <li><a href="portfolio.html" class="navbar__link">Portfolio</a></li>
         <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
       </ul>
@@ -62,7 +63,7 @@
 
     <!-- Mobile dropdown menu -->
     <div class="navbar__mobile" id="navbar-menu">
-      <ul class="navbar__mobile-links" role="list">
+      <ul class="navbar__mobile-links">
         <li><a href="index.html" class="navbar__link active">Home</a></li>
         <li><a href="bio.html" class="navbar__link">Bio</a></li>
         <li><a href="portfolio.html" class="navbar__link">Portfolio</a></li>
@@ -70,6 +71,8 @@
       </ul>
     </div>
   </header>
+
+  <div class="starfield" id="starfield" aria-hidden="true"></div>
 
   <main id="main-content">
 
@@ -230,7 +233,6 @@
 
     </section>
 
-
     <!-- ====================================================
          BIO — Alex Fisher style
          ==================================================== -->
@@ -276,6 +278,15 @@
 
       </div>
 
+      <!-- CTA guidata verso i progetti -->
+      <div class="bio-hero__cta" aria-label="Scopri i progetti">
+        <div class="bio-hero__cta-inner">
+          <span class="bio-hero__cta-label">I miei lavori</span>
+          <p class="bio-hero__cta-text">Scopri altro su di me esplorando i miei progetti — dal Liceo Artistico alle esperienze allo IED.</p>
+          <a href="portfolio.html" class="btn btn--primary">Vedi i miei lavori →</a>
+        </div>
+      </div>
+
       <!-- Bottom ornamental divider -->
       <div class="bio-hero__divider" aria-hidden="true">
         <span class="bio-hero__divider-line"></span>
@@ -283,6 +294,15 @@
         <span class="bio-hero__divider-line"></span>
       </div>
 
+    </section>
+
+    <!-- Guida: contatti -->
+    <section class="guide-cta-band" aria-label="Contattami">
+      <div class="container">
+        <p class="guide-cta-band__label">Ultimo passo</p>
+        <p class="guide-cta-band__text">Ti è piaciuto quello che hai visto? Raccontami la tua idea — sono qui per aiutarti a darle forma.</p>
+        <a href="#contact-form-heading" class="btn btn--outline">Scrivimi qui sotto ↓</a>
+      </div>
     </section>
 
     <!-- ====================================================
@@ -333,7 +353,7 @@
   <!-- ======================================================
        FOOTER
        ====================================================== -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container">
 
       <div class="footer__grid">
@@ -384,14 +404,15 @@
   <!-- ======================================================
        COOKIE BANNER
        ====================================================== -->
-  <div id="cookie-banner" class="cookie-banner" role="alert" aria-live="polite">
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-banner-title" aria-live="polite">
     <div class="cookie-banner__inner">
-      <p class="cookie-banner__text">
+      <p class="cookie-banner__text" id="cookie-banner-title">
         Questo sito utilizza cookie tecnici per garantire il corretto funzionamento.
-        Leggi la nostra <a href="privacy.html">Privacy Policy &amp; Cookie Policy</a> per saperne di più.
+        Leggi la <a href="privacy.html">Privacy &amp; Cookie Policy</a> per saperne di più.
       </p>
       <div class="cookie-banner__actions">
-        <button id="accept-cookies" class="btn btn--primary">Accetta</button>
+        <button id="reject-cookies" type="button" class="btn btn--outline-white">Rifiuta</button>
+        <button id="accept-cookies" type="button" class="btn btn--primary">Accetta</button>
       </div>
     </div>
   </div>
@@ -403,7 +424,7 @@
     <button class="lightbox__close" aria-label="Chiudi lightbox">&#10005;</button>
     <div class="lightbox__content">
       <button class="lightbox__prev" aria-label="Immagine precedente">&#8592;</button>
-      <img class="lightbox__img" src="" alt="">
+      <img class="lightbox__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
       <button class="lightbox__next" aria-label="Immagine successiva">&#8594;</button>
     </div>
   </div>

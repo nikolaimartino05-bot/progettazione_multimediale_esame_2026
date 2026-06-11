@@ -2,25 +2,40 @@
    main.js — Nikolai Martino Portfolio
    ============================================================ */
 
+const PLACEHOLDER_IMG = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+
 /* ------------------------------------------------------------
    Navbar — mobile toggle (dropdown menu)
    ------------------------------------------------------------ */
 const navToggle = document.querySelector('.navbar__toggle');
 const navMobile = document.querySelector('.navbar__mobile');
 
+function closeNavMobile() {
+  if (!navMobile || !navToggle) return;
+  navMobile.classList.remove('is-open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.textContent = '☰';
+  document.body.style.overflow = '';
+}
+
 if (navToggle && navMobile) {
   navToggle.addEventListener('click', () => {
     const isOpen = navMobile.classList.toggle('is-open');
     navToggle.setAttribute('aria-expanded', String(isOpen));
     navToggle.textContent = isOpen ? '✕' : '☰';
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
   navMobile.querySelectorAll('.navbar__link').forEach(link => {
-    link.addEventListener('click', () => {
-      navMobile.classList.remove('is-open');
-      navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.textContent = '☰';
-    });
+    link.addEventListener('click', closeNavMobile);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 767) closeNavMobile();
+  }, { passive: true });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeNavMobile();
   });
 }
 
@@ -129,7 +144,7 @@ document.querySelectorAll('.carousel').forEach(initCarousel);
   function close() {
     lightbox.classList.remove('is-open');
     document.body.style.overflow = '';
-    lbImg.src = '';
+    lbImg.src = PLACEHOLDER_IMG;
   }
 
   function collectImages() {
@@ -159,20 +174,47 @@ document.querySelectorAll('.carousel').forEach(initCarousel);
    Cookie Banner
    ------------------------------------------------------------ */
 (function () {
-  const banner    = document.getElementById('cookie-banner');
-  const acceptBtn = document.getElementById('accept-cookies');
+  const STORAGE_KEY = 'cookieConsent';
 
-  if (!banner) return;
-
-  if (!localStorage.getItem('cookieAccepted')) {
-    banner.style.display = 'block';
+  function hideBanner(banner) {
+    banner.classList.add('is-hidden');
+    document.documentElement.classList.add('cookie-consent-accepted');
   }
 
-  if (acceptBtn) {
-    acceptBtn.addEventListener('click', () => {
-      localStorage.setItem('cookieAccepted', 'true');
-      banner.style.display = 'none';
-    });
+  function initCookieBanner() {
+    const banner    = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const rejectBtn = document.getElementById('reject-cookies');
+
+    if (!banner) return;
+
+    try { localStorage.removeItem(STORAGE_KEY); } catch (err) {}
+
+    if (sessionStorage.getItem(STORAGE_KEY) === 'accepted') {
+      hideBanner(banner);
+    } else {
+      banner.classList.remove('is-hidden');
+      document.documentElement.classList.remove('cookie-consent-accepted');
+    }
+
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', () => {
+        sessionStorage.setItem(STORAGE_KEY, 'accepted');
+        hideBanner(banner);
+      });
+    }
+
+    if (rejectBtn) {
+      rejectBtn.addEventListener('click', () => {
+        banner.classList.add('is-hidden');
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCookieBanner);
+  } else {
+    initCookieBanner();
   }
 }());
 
@@ -268,7 +310,7 @@ document.querySelectorAll('.carousel').forEach(initCarousel);
   function closeLightbox() {
     lightbox.hidden = true;
     document.body.style.overflow = '';
-    lbImg.src = '';
+    lbImg.src = PLACEHOLDER_IMG;
   }
 
   document.querySelectorAll('.ps-gallery__btn').forEach(btn => {
@@ -306,6 +348,40 @@ document.querySelectorAll('.carousel').forEach(initCarousel);
       }, 3000);
     });
   });
+}());
+
+/* ------------------------------------------------------------
+   Starfield — stelle sparse su tutte le pagine
+   ------------------------------------------------------------ */
+(function () {
+  const field = document.getElementById('starfield');
+  if (!field) return;
+
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const count   = reduced ? 10 : 16;
+
+  for (let i = 0; i < count; i++) {
+    const star = document.createElement('span');
+    const isAccent = Math.random() < 0.3;
+    star.className = 'starfield__star' + (isAccent ? ' starfield__star--accent' : '');
+
+    const size    = isAccent ? 2.5 : 2;
+    const opacity = 0.6 + Math.random() * 0.35;
+    const driftX  = (-3 + Math.random() * 6).toFixed(1);
+    const driftY  = (-4 + Math.random() * 5).toFixed(1);
+
+    star.style.setProperty('--star-dur', `${16 + Math.random() * 16}s`);
+    star.style.setProperty('--star-delay', `${Math.random() * 12}s`);
+    star.style.setProperty('--star-drift-x', `${driftX}px`);
+    star.style.setProperty('--star-drift-y', `${driftY}px`);
+    star.style.setProperty('--star-opacity', String(opacity));
+    star.style.width  = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.left   = `${Math.random() * 100}%`;
+    star.style.top    = `${Math.random() * 100}%`;
+
+    field.appendChild(star);
+  }
 }());
 
 /* ------------------------------------------------------------

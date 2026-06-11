@@ -23,29 +23,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/cookie-consent.js"></script>
 </head>
-<body>
+<body class="has-starfield">
+
+  <div class="starfield" id="starfield" aria-hidden="true"></div>
 
   <!-- ======================================================
        NAVBAR
        ====================================================== -->
-  <header class="navbar navbar--solid" role="banner">
+  <header class="navbar navbar--solid">
     <nav class="navbar__inner" aria-label="Navigazione principale">
-      <ul class="navbar__links navbar__links--left" role="list">
+      <ul class="navbar__links navbar__links--left">
         <li><a href="index.html" class="navbar__link">Home</a></li>
         <li><a href="bio.html" class="navbar__link">Bio</a></li>
       </ul>
       <a href="index.html" class="navbar__logo" aria-label="Nikolai Martino — Homepage">
         <img src="img/logo/logo-nm-clean.png" alt="Logo NM" class="navbar__logo-img">
       </a>
-      <ul class="navbar__links navbar__links--right" role="list">
+      <ul class="navbar__links navbar__links--right">
         <li><a href="portfolio.html" class="navbar__link active" aria-current="page">Portfolio</a></li>
         <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
       </ul>
       <button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Apri menu">☰</button>
     </nav>
     <div class="navbar__mobile" id="navbar-menu">
-      <ul class="navbar__mobile-links" role="list">
+      <ul class="navbar__mobile-links">
         <li><a href="index.html" class="navbar__link">Home</a></li>
         <li><a href="bio.html" class="navbar__link">Bio</a></li>
         <li><a href="portfolio.html" class="navbar__link active">Portfolio</a></li>
@@ -175,9 +178,22 @@
       <span class="bio-page-divider__line"></span>
     </div>
 
-    <!-- Back to portfolio -->
-    <div class="pv-footer-nav">
-      <a href="portfolio.html" class="btn btn--outline">← Torna al Portfolio</a>
+    <!-- Prossimo progetto -->
+    <section class="pv-next-project" aria-label="Prossimo progetto">
+      <div class="container">
+        <div class="pv-next-project__inner">
+          <p class="pv-next-project__label">Prossimo progetto · 02</p>
+          <p class="pv-next-project__title">L'Arte del Digital Editing</p>
+          <p class="pv-next-project__tag">Photoshop</p>
+          <a href="portfolio-photoshop.html" class="btn btn--primary">Vai al progetto 02 →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigazione -->
+    <div class="pv-footer-nav pv-footer-nav--split">
+      <a href="portfolio.html" class="btn btn--outline">← Tutti i progetti</a>
+      <a href="contatti.html" class="btn btn--outline">Contattami</a>
     </div>
 
   </main>
@@ -185,7 +201,7 @@
   <!-- ======================================================
        FOOTER
        ====================================================== -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div>
@@ -229,11 +245,15 @@
   </footer>
 
   <!-- Cookie Banner -->
-  <div id="cookie-banner" class="cookie-banner" role="alert">
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-banner-title" aria-live="polite">
     <div class="cookie-banner__inner">
-      <p class="cookie-banner__text">Questo sito utilizza cookie tecnici. <a href="privacy.html">Cookie Policy</a>.</p>
+      <p class="cookie-banner__text" id="cookie-banner-title">
+        Questo sito utilizza cookie tecnici per garantire il corretto funzionamento.
+        Leggi la <a href="privacy.html">Privacy &amp; Cookie Policy</a> per saperne di più.
+      </p>
       <div class="cookie-banner__actions">
-        <button id="accept-cookies" class="btn btn--primary">Accetta</button>
+        <button id="reject-cookies" type="button" class="btn btn--outline-white">Rifiuta</button>
+        <button id="accept-cookies" type="button" class="btn btn--primary">Accetta</button>
       </div>
     </div>
   </div>
