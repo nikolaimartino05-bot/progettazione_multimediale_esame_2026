@@ -891,18 +891,18 @@ body.has-starfield .starfield__star--accent {
     0 0 14px 4px rgba(160, 200, 240, 0.65);
 }
 
-/* Hero home — video tintato come il resto della pagina */
+/* Hero home — video visibile, leggermente tintato di azzurro */
 body.page-home .site-hero__video {
-  filter: brightness(1.45) contrast(0.88) saturate(0.45);
-  opacity: 0.9;
+  filter: brightness(1.2) contrast(0.95) saturate(0.7);
+  opacity: 1;
 }
 
 body.page-home .site-hero__video-overlay {
   background: linear-gradient(
     180deg,
-    rgba(220, 233, 245, 0.7) 0%,
-    rgba(208, 226, 242, 0.78) 45%,
-    rgba(220, 233, 245, 0.86) 100%
+    rgba(220, 233, 245, 0.32) 0%,
+    rgba(208, 226, 242, 0.38) 45%,
+    rgba(220, 233, 245, 0.45) 100%
   );
 }
 
