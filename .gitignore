@@ -2,5 +2,7 @@
 *.mov
 *.mp4
 !img/sfondi/14081587_1920_1080_60fps.mp4
+!img/esame video/trailer.mp4
+!img/esame video/esame-editing.mp4
 *.pdf
 !img/cv/CV.pdf
