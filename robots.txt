@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nikolaimartino05-bot.github.io/progettazione_multimediale_esame_2026/sitemap.xml
