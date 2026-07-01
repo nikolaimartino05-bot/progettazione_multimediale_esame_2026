@@ -295,6 +295,10 @@ p {
   padding-top: 72px;
   padding-inline: var(--space-md);
   background-color: var(--color-bg);
+  background-image: url('../img/og-share-hero.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   overflow: hidden;
 }
